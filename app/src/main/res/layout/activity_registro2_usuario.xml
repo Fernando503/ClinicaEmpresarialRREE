@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_Regitro2_Usuario"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp"
+    android:orientation="vertical"
+    tools:context=".Registro2Usuario">
+
+    //Correo
+
+    <ImageView
+        android:id="@+id/imgUsuario"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="35dp"
+        android:layout_centerInParent="true"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layoutCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="30dp">
+
+        <EditText
+            android:id="@+id/txtCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/layoutCorreo"
+            android:hint="Correo Electronico intitucional"
+            android:inputType="textEmailAddress"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    //Contraseña
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layoutPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_below="@+id/layoutCorreo"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/txtPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/layoutPass"
+            android:hint="Ingresar contraseña"
+            android:inputType="textPassword" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    //Contraseña
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layoutPass2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutPass"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/txtPass2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/layoutPass2"
+            android:hint="Repetir contraseña"
+            android:inputType="textPassword" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/chCondiciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutPass2"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="40dp"
+        android:onClick="checkClic"
+        android:text="Acepta terminos y Condiciones de uso" />
+
+    <Button
+        android:id="@+id/btnRegistrarFinal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Siguiente"/>
+</LinearLayout>

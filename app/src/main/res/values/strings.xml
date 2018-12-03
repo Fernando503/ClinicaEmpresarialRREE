@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RREE mHealth</string>
+    <string-array name="areas">
+        <item>Seleccionar Departamento</item>
+        <item>Sistemas</item>
+        <item>RRHH</item>
+        <item>Gerencia</item>
+        <item>Soporte</item>
+    </string-array>
+</resources>

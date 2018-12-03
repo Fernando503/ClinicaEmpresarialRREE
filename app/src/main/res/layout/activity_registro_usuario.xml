@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_Regitro_Usuario"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp"
+    tools:context=".RegistroUsuario">
+
+    <RelativeLayout
+        android:id="@+id/layoutCont1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="29dp">
+
+        //nombres
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layoutNombres"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp">
+
+
+            <EditText
+                android:id="@+id/txtNombres"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layoutNombres"
+                android:layout_alignStart="@+id/layoutNombres"
+                android:hint="Nombres"
+                android:inputType="text"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        //apellidos
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layoutApellidos"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutNombres"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="15dp">
+
+
+            <EditText
+                android:id="@+id/txtApellidos"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layoutApellidos"
+                android:layout_alignStart="@+id/layoutApellidos"
+                android:hint="Apellidos"
+                android:inputType="text"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/imgRegistro"
+            android:layout_width="112dp"
+            android:layout_height="109dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="7dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/addimg" />
+
+        <Button
+            android:id="@+id/btnAgregarImg"
+            android:layout_width="51dp"
+            android:layout_height="42dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="0dp"
+            android:backgroundTint="@color/colorAccent"
+            android:drawableTop="@drawable/ic_attach_cita_black_24dp"
+            android:onClick="seleccionar" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutCont1"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layoutFecha"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:id="@+id/txtFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/layoutFecha"
+                android:hint="Fecha de nacimiento"
+                android:focusable="false"
+                android:clickable="true"
+                android:maxLines="1"
+                android:inputType="date"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+    //select de departamento
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layoutDepartamento"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutFecha"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="15dp">
+
+            <Spinner
+                android:id="@+id/selectDep"
+                android:layout_width="294dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="1dp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+     //isss
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layoutIsss"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:id="@+id/txtIsss"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignStart="@+id/layoutIsss"
+                android:hint="Numero de ISSS"
+                android:inputType="text|number" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        //DUI
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layoutDui"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:id="@+id/txtDui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/layoutDui"
+                android:hint="Numero de Dui"
+                android:inputType="text|number" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        //Telefono
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layoutTelefono"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:id="@+id/txtTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/layoutTelefono"
+                android:hint="Telefono de Contacto"
+                android:inputType="text|phone" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="73dp"
+        android:layout_marginBottom="34dp"
+        android:onClick="abrirRegistro2"
+        android:text="Registrarme" />
+
+
+</RelativeLayout>
